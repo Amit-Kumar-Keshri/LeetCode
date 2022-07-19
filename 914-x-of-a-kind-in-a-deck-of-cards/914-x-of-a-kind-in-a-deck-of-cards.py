@@ -14,7 +14,7 @@ class Solution:
 
         ans = res[deck[0]]
         for i in res:
-            ans = self.gcd(ans, res[i])
+            ans = self.gcd(max(ans, res[i]),min(ans, res[i]))
         if ans>1:
             return 1
         else:

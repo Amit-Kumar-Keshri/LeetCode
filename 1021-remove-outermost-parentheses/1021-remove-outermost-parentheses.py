@@ -1,15 +1,16 @@
 class Solution:
     def removeOuterParentheses(self, s: str) -> str:
         ans = []
-        st = []
+        # st = []
+        count = 0
         for i in s:
             if i=="(":
-                if len(st):
+                if count>0:
                     ans.append(i)
-                st.append(i)
+                count +=1
             else:
-                st.pop()
-                if len(st):
+                count -=1
+                if count >0:
                     ans.append(i)
         return "".join(ans)
                 

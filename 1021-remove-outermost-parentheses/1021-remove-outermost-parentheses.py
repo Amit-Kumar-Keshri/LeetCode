@@ -9,7 +9,7 @@ class Solution:
                 st.append(i)
             else:
                 st.pop()
-                if len(st)!= 0:
+                if len(st):
                     ans.append(i)
         return "".join(ans)
                 

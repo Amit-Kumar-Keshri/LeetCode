@@ -10,8 +10,4 @@ class Solution:
             else:
                 ans.append(h)
                 h -= 1
-        s1 = 0
-        for i in range(1,len(s)+1):
-            s1 += i
-        ans.append(s1 - sum(ans))
-        return ans   
+        return ans + [h]

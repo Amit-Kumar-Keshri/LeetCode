@@ -1,10 +1,12 @@
 class Solution:
     def s(self,n):
-        n = str(n)
-        res = 0
-        for i in n:
-            res += int(i)**2
-        return res
+        s = 0
+        while n>0:
+            t = n%10
+            s += t**2
+            n//=10
+        return s
+            
     def isHappy(self, n: int) -> bool:
         repeat = set()
         while True:

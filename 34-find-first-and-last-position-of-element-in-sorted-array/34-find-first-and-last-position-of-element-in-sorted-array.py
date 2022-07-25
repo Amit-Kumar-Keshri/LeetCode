@@ -35,8 +35,5 @@ class Solution:
         
         return last
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        ans = []
-        ans.append(self.firstoccr(nums,target))
-        ans.append(self.lastoccr(nums,target))
-        return ans
+        return [self.firstoccr(nums,target),self.lastoccr(nums,target)]
                     

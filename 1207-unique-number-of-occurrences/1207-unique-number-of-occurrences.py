@@ -8,10 +8,10 @@ class Solution:
             else:
                 m[i] = 1
         
-        x = []
+        x = set()
         for i in m.values():
             if i in x:
                 return False
             else:
-                x.append(i)
+                x.add(i)
         return True

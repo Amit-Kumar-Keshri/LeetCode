@@ -6,8 +6,8 @@ class Solution:
                 m[i] += 1
             else:
                 m[i] = 1
-        l = []
+        l = 0
         for i in nums:
             if m[i] == 1:
-                l.append(i)
-        return sum(l)
+                l += i
+        return l

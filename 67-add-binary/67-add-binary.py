@@ -10,7 +10,7 @@ class Solution:
 
         for i in range(len(a)-1,-1,-1):
                 if a[i] == "1" and b[i] =="1":
-                    if carry is "0":
+                    if carry == "0":
                         ans+="0"
                         carry = "1"
                     else:
@@ -18,14 +18,14 @@ class Solution:
 
 
                 elif (a[i] == "1" and b[i] == "0") or  (a[i] == "0" and b[i] == "1"):
-                    if(carry is "0"):
+                    if(carry == "0"):
                         ans+="1"
                     else:
                         ans+="0"
 
 
                 else:
-                    if(carry is "0"):
+                    if(carry == "0"):
                         ans+="0"
                     else:
                         ans+="1"

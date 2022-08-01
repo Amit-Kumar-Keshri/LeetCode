@@ -4,6 +4,7 @@ class Solution:
         
         curr = 0
         max_l = 0
+        
         if n<3:
             return 0
         
@@ -20,6 +21,9 @@ class Solution:
                     lenn = start - curr +1
                     if max_l < lenn:
                         max_l = lenn
+            if max_l > n//2:
+                return max_l
+            
             if curr == start:
                 curr+=1
             else:

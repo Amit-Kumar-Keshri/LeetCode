@@ -13,3 +13,4 @@ class Solution:
                 h = m-1 
             else:
                 l = m+1
+            

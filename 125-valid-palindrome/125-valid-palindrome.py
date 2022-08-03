@@ -9,8 +9,8 @@ class Solution:
                 strs+=i.lower()
             elif i.isnumeric():
                 strs+=i
-            else:
-                continue
+            # else:
+            #     continue
         print(strs)
         l = 0
         h = len(strs)-1

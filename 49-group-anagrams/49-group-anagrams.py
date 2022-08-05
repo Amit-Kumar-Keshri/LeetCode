@@ -1,5 +1,6 @@
 class Solution:
     def groupAnagrams(self, nums: List[str]) -> List[List[str]]:
+        ans = []
         m = {}
         
         n = len(nums)

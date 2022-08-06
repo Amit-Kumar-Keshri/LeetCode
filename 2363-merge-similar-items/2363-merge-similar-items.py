@@ -12,10 +12,9 @@ class Solution:
                 m[items2[i][0]] = m[items2[i][0]]+ items2[i][1]
             else:
                 m[items2[i][0]] = items2[i][1]
-        # print(m)
+        
         ans = [] 
         
         for i in m:
-            ans.append([i,m[i]]) 
-        
+            ans.append([i,m[i]])
         return sorted(ans, key = lambda x:x[0])

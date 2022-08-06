@@ -1,13 +1,16 @@
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        ans = []
-        
+        x = sorted(nums)
+        m = {}
         for i in range(len(nums)):
-            c = 0
+            if x[i] not in m:
+                m[x[i]] = i
+                
+        for i in range(len(nums)):
+            nums[i] = m[nums[i]]
             
-            for j in range(len(nums)):
-                if nums[i] > nums[j] and nums[i]!=nums[j]:
-                    c += 1
-            ans.append(c)
-        return ans
+        return nums
+            
+            
+        
                 

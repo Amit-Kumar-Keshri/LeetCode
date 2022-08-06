@@ -8,9 +8,9 @@ class Solution:
                 m[i] = chr(97+c)
                 c+=1
         s= ""
-        for i in range(len(message)):
-            if message[i]!=" " and message[i] in m:
-                s += m[message[i]]
+        for i in message:
+            if i!=" ":
+                s += m[i]
             else:
                 s+=" "
         return s

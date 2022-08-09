@@ -9,7 +9,6 @@ class Solution:
                 m[s[i]] += 1
                 
         for i,j in enumerate(s):
-            if j in m:
-                if m[j] == 1:
-                    return i
+            if j in m and m[j] == 1:
+                return i
         return -1

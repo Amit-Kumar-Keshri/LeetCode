@@ -38,5 +38,4 @@ class Solution:
             ans.append(deepcopy(nums))
             i+= 1
             
-
         return ans

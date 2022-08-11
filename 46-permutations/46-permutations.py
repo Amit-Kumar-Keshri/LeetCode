@@ -1,4 +1,4 @@
-from copy import deepcopy
+#from copy import deepcopy
 class Solution:
     # possible permutations
     def fact(self, n: int) -> int:
@@ -32,8 +32,8 @@ class Solution:
         
         i = 0
         while i < x: 
-            self.nxtper(nums)
-            ans.append(deepcopy(nums))
+            a= self.nxtper(nums)
+            ans.append(a[:])
             i+= 1
             
         return ans

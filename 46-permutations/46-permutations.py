@@ -32,11 +32,9 @@ class Solution:
         x = self.fact(n)
         ans = []
         
-        i = 0
-        while i < x: 
+        for i in range(x): 
             self.nxtper(nums)
             ans.append(deepcopy(nums))
-            i+= 1
             
 
         return ans

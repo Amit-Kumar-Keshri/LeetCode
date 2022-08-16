@@ -8,11 +8,11 @@ class Solution:
             else:
                 m[ch] += 1
         
-        dict_item = dict(sorted(m.items(), key=lambda value:value[1], reverse = True))
+        dict_item = sorted(m.items(), key=lambda value:value[1], reverse = True)
         # print(dict_item)
         ans = ""
-        for i in dict_item:
-            ans += i*dict_item[i]
+        for ch,i in dict_item:
+            ans += ch*i
             
         return ans
             

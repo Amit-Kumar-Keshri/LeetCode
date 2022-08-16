@@ -21,11 +21,11 @@ class Solution:
         while temp:
             a.append(temp.val)
             temp = temp.next
-        
+        c = -1
         while head:
-            if head.val == a[-1]:
+            if head.val == a[c]:
                 head = head.next
-                a.pop()
+                c -= 1
             else:
                 return False
             

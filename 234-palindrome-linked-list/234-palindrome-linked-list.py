@@ -21,11 +21,12 @@ class Solution:
         while temp:
             a.append(temp.val)
             temp = temp.next
-        c = -1
-        while head:
-            if head.val == a[c]:
-                head = head.next
-                c -= 1
+        l = 0
+        r = len(a)-1
+        while r>=l:
+            if a[l] == a[r]:
+                l += 1
+                r -= 1
             else:
                 return False
             

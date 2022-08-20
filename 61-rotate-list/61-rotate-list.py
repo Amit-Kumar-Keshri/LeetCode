@@ -9,32 +9,25 @@ class Solution:
         if(not head or not head.next or k==0):
             return head
         
-        t = head
-        n = 0
-        while t:
-            t = t.next
-            n += 1
-            
-        temp = head
-        c = 1
-        k =(k%n)
-        
-        if(k == 0):
-            return head;
-        swap_node = None
-        while temp:
-            if c == (n-k):
-                swap_node = temp.next
-                temp.next = None
-                break
+        temp= head
+        n = 1
+        while temp.next:
             temp = temp.next
-            c+=1
+            n += 1
+        temp.next = head
+    
+        newHead = None
+        k = n -(k%n)
+        c = 1
+        while c != k:
+            head = head.next
+            c += 1
+        #print(head.val) 
+        newHead = head.next
+        head.next = None
+        return newHead
         
-        t1 = swap_node
-        while t1.next:
-            t1 = t1.next
-        t1.next = head
-        return swap_node
+            
             
             
             

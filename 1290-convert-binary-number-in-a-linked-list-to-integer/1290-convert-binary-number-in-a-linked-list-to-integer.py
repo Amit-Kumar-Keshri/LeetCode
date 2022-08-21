@@ -15,7 +15,6 @@ class Solution:
 
         while head:
             ans = (2*ans)+head.val
-            print(head.val)
             head = head.next
             
         return ans

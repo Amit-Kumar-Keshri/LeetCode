@@ -8,14 +8,14 @@ class Solution:
             else:
                 m[i] += 1
         
-        n = {}     
+        #n = {}     
         for i in ransomNote:
-            if i not in n:
-                n[i] = 1
+            if i not in m:
+                return False
             else:
-                n[i] += 1
-
+                m[i] -= 1
+        
         for i in ransomNote:
-            if i not in m or n[i] >m[i]:
+            if m[i] < 0:
                 return False
         return True

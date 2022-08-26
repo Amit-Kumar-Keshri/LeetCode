@@ -5,8 +5,7 @@ class Solution {
         
         
         while(x>0){
-            int r = x % 10;
-            l = l*10 + r;
+            l = l*10 + x%10;
             x =x / 10;
         }
         if(temp==l){

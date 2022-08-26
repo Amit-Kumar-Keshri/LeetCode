@@ -4,7 +4,7 @@ class Solution {
         int temp = x;
         int n = s.length()-1;
         int l = 0;
-        while(l<=n){
+        while(l<n){
             if (s.charAt(l)!=s.charAt(n))
                 return false;
             l++;
